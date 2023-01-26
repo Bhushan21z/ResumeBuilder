@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./tempstyle.css";
 import Grid from "@mui/material/Grid";
 import { Divider, Typography } from "@mui/material";
-import { fontStyle } from "@mui/system";
 
 const Styles = {
   subheading: {
@@ -39,9 +38,9 @@ const Styles = {
   },
 };
 
-var dummydata="Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.";
-var name="Bhushan Wanjari";
-
+var dummydata =
+  "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.";
+var name = "Bhushan Wanjari";
 
 ///// API calling code
 //// Json data of resume
@@ -83,7 +82,7 @@ function Template() {
               letterSpacing: "0px",
             }}
           >
-           {dummydata}
+            {dummydata}
           </Typography>
           {/* ------------------- Work Experience ------------------- */}
 

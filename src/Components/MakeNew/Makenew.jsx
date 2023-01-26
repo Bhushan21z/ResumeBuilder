@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 import {
   Typography,
-  TextField,
   Button,
   Stepper,
   Step,
@@ -12,12 +11,7 @@ import {
   Grid,
 } from "@mui/material";
 import GradingIcon from "@mui/icons-material/Grading";
-import {
-  useForm,
-  Controller,
-  FormProvider,
-  useFormContext,
-} from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
 import Personal from "./AllPages/Personal";
 import Education from "./AllPages/Education";
 import WorkExp from "./AllPages/WorkExp";
@@ -31,44 +25,6 @@ function getSteps() {
     "Achievements",
   ];
 }
-
-const AchievementFrom = () => {
-  const { control } = useFormContext();
-  return (
-    <>
-      <Controller
-        control={control}
-        name="Achievement1"
-        render={({ field }) => (
-          <TextField
-            id="achievement1"
-            label="Achievement1"
-            variant="outlined"
-            placeholder="Enter Your Achievement"
-            fullWidth
-            margin="normal"
-            {...field}
-          />
-        )}
-      />
-      <Controller
-        control={control}
-        name="Achievemetdesc1"
-        render={({ field }) => (
-          <TextField
-            id="achievementdesc1"
-            label="Achievemetdesc1"
-            variant="outlined"
-            placeholder="Achievement Description"
-            fullWidth
-            margin="normal"
-            {...field}
-          />
-        )}
-      />
-    </>
-  );
-};
 
 function getStepContent(step) {
   switch (step) {
@@ -89,11 +45,11 @@ const Makenew = () => {
   const navigate = useNavigate();
   // const classes = useStyles();
 
-  const location = useLocation()
-  var tempno=location.hash;
-  var TemplateNo={
-    tempno: tempno.charAt(tempno.length-1)
-  }
+  const location = useLocation();
+  var tempno = location.hash;
+  var TemplateNo = {
+    tempno: tempno.charAt(tempno.length - 1),
+  };
   console.log(TemplateNo);
 
   const methods = useForm({
@@ -129,14 +85,14 @@ const Makenew = () => {
 
   const handleNext = (data) => {
     console.log(data);
-    if (activeStep == steps.length - 1) {
+    if (activeStep === steps.length - 1) {
       // fetch("https://jsonplaceholder.typicode.com/comments")
       //   .then((data) => data.json())
       //   .then((res) => {
       //     console.log(res);
       //     setActiveStep(activeStep + 1);
       //   });
-        navigate("/display",{ state: TemplateNo });
+      navigate("/display", { state: TemplateNo });
     } else {
       setActiveStep(activeStep + 1);
       setSkippedSteps(
