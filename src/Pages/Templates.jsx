@@ -1,5 +1,5 @@
 import React from "react";
-import Template from "../Components/Templates/Template";
+import Template from "../Components/Display/Template";
 import Appbar from "../Components/Appbar";
 import Footer from "../Components/Footer";
 const Templates = () => {

@@ -1,222 +1,130 @@
 import React from "react";
-import "./tempstyle.css";
-import Grid from "@mui/material/Grid";
-import { Divider, Typography } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
+import Template1 from "../../Assets/Template1.jpg";
+import Template2 from "../../Assets/Template2.jpg";
+import Template3 from "../../Assets/Template3.jpg";
+import Template4 from "../../Assets/Template4.jpg";
+import { Link } from "react-router-dom";
+import TaskIcon from "@mui/icons-material/Task";
 
-const Styles = {
-  subheading: {
-    fontWeight: "bold",
-    fontSize: "15px",
-    color: "#003f88",
-    mt: 3,
-    mb: 1,
+const data = [
+  {
+    title: "Template 1",
+    image: Template1,
+    link: "/resume/1",
   },
-
-  workexp1: {
-    fontSize: "15px",
-    color: "black",
-    fontWeight: "bold",
+  {
+    title: "Template 2",
+    image: Template2,
+    link: "/resume/2",
   },
-
-  workexp2: {
-    fontSize: "12px",
-    color: "#6c757d",
-    mr: 2,
-
-    fontWeight: "bold",
+  {
+    title: "Template 3",
+    image: Template3,
+    link: "/resume/3",
   },
-  workexp3: {
-    fontSize: "12px",
-    color: "#6c757d",
-    mb: 1,
-    fontWeight: "bold",
+  {
+    title: "Template 4",
+    image: Template4,
+    link: "/resume/4",
   },
-  workexp4: {
-    fontSize: "12px",
-    color: "#6c757d",
-    mr: 1,
+  {
+    title: "Template 5",
+    image: Template4,
+    link: "/resume/5",
   },
-};
+  {
+    title: "Template 6",
+    image: Template4,
+    link: "/resume/6",
+  },
+];
 
-var dummydata =
-  "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.";
-var name = "Bhushan Wanjari";
-
-///// API calling code
-//// Json data of resume
-
-function Template() {
+const Template = () => {
   return (
     <div>
-      <Grid
-        container
-        xs={12}
+      <Typography
+        variant="h4"
         sx={{
-          py: 4,
-          px: 3,
-          width: "587px",
-          height: "834px",
+          mt: "150px",
+          fontWeight: "bold",
+          color: "#000",
+          textAlign: "center",
+          marginBottom: "3%",
         }}
       >
-        {/* --------------------------Left Grid-------------------------- */}
-        <Grid item xs={8}>
-          {/* ----------------------Heading---------------------- */}
-          <Typography
-            sx={{
-              fontWeight: "bold",
-              fontSize: "30px",
-              color: "#003f88",
-            }}
-          >
-            {name}
-          </Typography>
-          <Typography
-            sx={{ fontSize: "15px", color: "#6c757d", fontWeight: "bold" }}
-          >
-            Data Scientist
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "12px",
-              color: "#6c757d",
-              letterSpacing: "0px",
-            }}
-          >
-            {dummydata}
-          </Typography>
-          {/* ------------------- Work Experience ------------------- */}
-
-          <Typography sx={Styles.subheading}>Work Experience</Typography>
-          <Divider sx={{ width: "80%", mt: 1, mb: 2 }} />
-
-          <Grid container sx={{ my: 2 }}>
-            <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>Data Scientist</Typography>
-              <Typography sx={Styles.workexp2}>2019 - Present</Typography>
-            </Grid>
-            <Typography sx={Styles.workexp3}>
-              Resume Worded, New York, NY
-            </Typography>
-            <Typography sx={Styles.workexp4}>
-              ● Launched Miami office with lead Director and recruited a new
-              team of 10 employees; grew office revenue by 200% in first nine
-              months (representing 20% of company revenue). Led redesign of
-              mobile app and website. <br />
-              ● Led the first major effort to A/B test the company's e-commerce
-              sales page and optimize it for customer acquisition; resulted in a
-              7.5% increase in conversions <br />
-            </Typography>
-          </Grid>
-
-          <Grid container sx={{ my: 2 }}>
-            <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>Data Scientist</Typography>
-              <Typography sx={Styles.workexp2}>2019 - Present</Typography>
-            </Grid>
-            <Typography sx={Styles.workexp3}>
-              Resume Worded, New York, NY
-            </Typography>
-            <Typography sx={Styles.workexp4}>
-              ● Launched Miami office with lead Director and recruited a new
-              team of 10 employees; grew office revenue by 200% in first nine
-              months (representing 20% of company revenue). Led redesign of
-              mobile app and website. <br />
-              ● Led the first major effort to A/B test the company's e-commerce
-              sales page and optimize it for customer acquisition; resulted in a
-              7.5% increase in conversions <br />
-            </Typography>
-          </Grid>
-          <Grid container sx={{ my: 2 }}>
-            <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>Data Scientist</Typography>
-              <Typography sx={Styles.workexp2}>2019 - Present</Typography>
-            </Grid>
-            <Typography sx={Styles.workexp3}>
-              Resume Worded, New York, NY
-            </Typography>
-            <Typography sx={Styles.workexp4}>
-              ● Launched Miami office with lead Director and recruited a new
-              team of 10 employees; grew office revenue by 200% in first nine
-              months (representing 20% of company revenue). Led redesign of
-              mobile app and website. <br />
-              ● Led the first major effort to A/B test the company's e-commerce
-              sales page and optimize it for customer acquisition; resulted in a
-              7.5% increase in conversions <br />
-            </Typography>
-          </Grid>
-        </Grid>
-
-        {/* ---------------------------------Right Grid--------------------------  */}
-        <Grid
-          item
-          xs={4}
+        <TaskIcon
           sx={{
-            backgroundColor: "#edede9",
+            fontSize: "2.5rem",
+            color: "#000",
+            marginRight: "5px",
           }}
-        >
-          {/* ------------------------ Contact ------------------------ */}
-          <Grid container sx={{ my: 3, justifyContent: "center" }}>
-            <Typography sx={{ fontSize: "15px" }}>Contact</Typography>
-            <Divider sx={{ width: "80%", my: 1, color: "black" }} />
-            <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
-              • Denver, OH <br />
-              • +1-234-456-789
-              <br />
-              • email@resumeworded.com <br />
-              • linkedin.com/in/username
-              <br />
-              • github.com/resumeworded
-              <br />
-            </Typography>
-          </Grid>
+        />
+        Templates
+      </Typography>
 
-          {/* ------------------------ Skills ------------------------ */}
-
-          <Grid container sx={{ my: 3, justifyContent: "center" }}>
-            <Typography sx={{ fontSize: "15px" }}>Skills</Typography>
-            <Divider sx={{ width: "90%", my: 1, color: "black" }} />
-            <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
-              • Python <br />
-              • R <br />
-              • SQL <br />
-              • Tableau <br />
-              • Machine Learning <br />
-              • Deep Learning <br />
-            </Typography>
-          </Grid>
-
-          {/* ------------------------ Education ------------------------ */}
-
-          <Grid container sx={{ my: 3, justifyContent: "center" }}>
-            <Typography sx={{ fontSize: "15px" }}>Education</Typography>
-            <Divider sx={{ width: "80%", my: 1, color: "black" }} />
-            <Typography
+      <Grid
+        container
+        sx={{
+          padding: "1%",
+          justifyContent: "center",
+        }}
+      >
+        {/* <Grid item> */}
+        {data.map((item) => (
+          <Link
+            to={{ pathname: "/resume", hash: item.title }}
+            style={{ textDecoration: "None" }}
+          >
+            <Card
               sx={{
-                fontSize: "12px",
-                color: "#6c757d",
-                mx: 1,
-                fontWeight: "bold",
+                width: "auto",
+                margin: "20px ",
+                backgroundColor: "#023047",
+                boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.75)",
+                padding: "5px",
+                "&:hover": {
+                  boxShadow: "0px 0px 20px 0px rgba(0,0,0,0.75)",
+                  border: "1px solid #023047",
+                },
               }}
             >
-              Resume Worded University{" "}
-            </Typography>
-            <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 2 }}>
-              <li> Bachelor of Engineering </li>
-              <li>
-                {" "}
-                Major in Computer Science Minors in Mathematics and Statistics
-                Boston, MA — May 2018
-              </li>
-              <li>
-                Awards: Resume Worded Teaching Fellow (only 5 awarded to class),
-                Dean’s List 2012 (Top 10%)
-              </li>
-            </Typography>
-          </Grid>
-        </Grid>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  height="500"
+                  width="auto"
+                  image={item.image}
+                  alt={item.title}
+                />
+              </CardActionArea>
+              <CardActions
+                sx={{
+                  backgroundColor: "#023047",
+                }}
+              >
+                <Button size="small" color="primary">
+                  <Typography
+                    sx={{
+                      color: "white",
+                      fontSize: "20px",
+                      textDecoration: "none",
+                      fontFamily: "sans-serif",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Button>
+              </CardActions>
+            </Card>
+          </Link>
+        ))}
       </Grid>
     </div>
   );
-}
+};
 
 export default Template;
