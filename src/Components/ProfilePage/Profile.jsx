@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Grid, Button, Divider, Paper, CardHeader } from "@mui/material";
+import { Grid, Button, Divider, CardHeader } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -53,8 +53,6 @@ const address = [
   { State: "NY" },
   { Zip: "12345" },
 ];
-
-const skills = ["Python", "Java", "C++", "C#", "JavaScript", "React", "Node"];
 
 const EditInfo = () => {
   return (

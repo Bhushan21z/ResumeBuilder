@@ -8,8 +8,8 @@ import Auth from "./auth2";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import setCookie from "../../../hooks/setCookie";
-import getCookie from "../../../hooks/getCookie";
-import removeCookie from "../../../hooks/removeCookie";
+// import getCookie from "../../../hooks/getCookie";
+// import removeCookie from "../../../hooks/removeCookie";
 import { useNavigate } from "react-router-dom";
 
 var modalText="Proceed";

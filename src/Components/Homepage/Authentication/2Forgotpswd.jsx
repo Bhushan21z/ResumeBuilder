@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { useLocation } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 import {
   Grid,
   Paper,
@@ -58,10 +58,10 @@ const Forgotpswd = () => {
     e.preventDefault();
 
     if (form.current.otp.value === location.state.data.otp) {
-      const newstate = {
-        email: location.state.data.email,
-        password: form.current.password.value,
-      };
+      // const newstate = {
+      //   email: location.state.data.email,
+      //   password: form.current.password.value,
+      // };
       modalText = "Changed Password Successfully";
       setLastpage("/login");
       setMessage("Proceed");

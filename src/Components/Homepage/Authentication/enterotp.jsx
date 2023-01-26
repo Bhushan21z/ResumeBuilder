@@ -2,7 +2,15 @@ import React, { useRef } from "react";
 import axios from "axios";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Grid, Paper, TextField, Button, Modal, Box, Typography } from "@mui/material";
+import {
+  Grid,
+  Paper,
+  TextField,
+  Button,
+  Modal,
+  Box,
+  Typography,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 const buttons = { margin: "8px 0", backgroundColor: "#00ABF3" };
 const text = { padding: 2 };
@@ -14,17 +22,7 @@ const paperStyle = {
   height: "500px",
   // boxShadow: "1px 0px 0px 0px black",
 };
-const btn = {
-  height: 40,
-  width: 150,
-  margin: "5px",
-  backgroundColor: "#1D3557",
-  fontSize: 10,
-  "&:hover": {
-    border: "1px solid white",
-    backgroundColor: "#1D3557",
-  },
-};
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -36,14 +34,13 @@ const style = {
   boxShadow: 24,
   p: 4,
 };
-var modalText="Proceed";
+var modalText = "Proceed";
 
 export const OtpEnter = (props) => {
   const form = useRef();
   const navigate = useNavigate();
   const location = useLocation();
   console.log(location.state.data);
-
 
   //// Modal Code
   const [open, setOpen] = useState(false);
@@ -75,18 +72,18 @@ export const OtpEnter = (props) => {
       console.log(newstate);
       axios
         .post("http://localhost:8000/users", newstate)
-        .then(response => {
-            console.log(response);
-            modalText = "Registered Successfully";
-            setLastpage("/login");
-            setMessage("Proceed");
+        .then((response) => {
+          console.log(response);
+          modalText = "Registered Successfully";
+          setLastpage("/login");
+          setMessage("Proceed");
         })
-        .catch(error => {
-            console.log(error.response);
-            modalText = "Error Registering";
-            setLastpage("/otp");
-            setMessage("Try Again");
-        })
+        .catch((error) => {
+          console.log(error.response);
+          modalText = "Error Registering";
+          setLastpage("/otp");
+          setMessage("Try Again");
+        });
     } else {
       console.log("error otp");
       modalText = "Wrong OTP";
@@ -126,32 +123,32 @@ export const OtpEnter = (props) => {
           </Button>
         </form>
         <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {modalText}
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {/* <Link
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              {modalText}
+            </Typography>
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              {/* <Link
                 style={{ textDecoration: "None", color: "white" }}
                 to={lastpage}
               > */}
-            <Button
-              onClick={navigation}
-              style={buttons}
-              variant="contained"
-              color="primary"
-            >
-              {message}
-            </Button>
-            {/* </Link> */}
-          </Typography>
-        </Box>
-      </Modal>
+              <Button
+                onClick={navigation}
+                style={buttons}
+                variant="contained"
+                color="primary"
+              >
+                {message}
+              </Button>
+              {/* </Link> */}
+            </Typography>
+          </Box>
+        </Modal>
       </Paper>
     </Grid>
 

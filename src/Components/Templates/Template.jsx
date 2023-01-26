@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
@@ -37,11 +37,7 @@ const data = [
   },
 ];
 
-
 const Template = () => {
-  const ResumeNo={
-    TemplateNo:2
-  }
   return (
     <div
       style={{
@@ -80,7 +76,10 @@ const Template = () => {
       >
         {/* <Grid item> */}
         {data.map((item) => (
-          <Link to={{pathname:"/resume", hash:item.title}} style={{ textDecoration: "None" }}>
+          <Link
+            to={{ pathname: "/resume", hash: item.title }}
+            style={{ textDecoration: "None" }}
+          >
             <Card
               sx={{
                 width: "auto",
