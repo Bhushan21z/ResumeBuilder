@@ -38,9 +38,94 @@ const Styles = {
   },
 };
 
-var dummydata =
-  "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.";
-var name = "Bhushan Wanjari";
+// var dummydata =
+//   "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.";
+// var name = "Bhushan Wanjari";
+
+var dummydata={
+	"_id": "63d7fc790485ae46ab58da46",
+	"email": "bhushanwanjari@gmail.com",
+	"personal": {
+		"name": "Bhushan Wanjari",
+		"position": "Software Engineer",
+		"contact": "7709317844",
+		"linkedin": "bhushan-wanjari-952042213/",
+		"github": "bhushan-wanjari-952042213/",
+		"email": "wanjaribl@rknec.edu",
+		"bio": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+		"_id": "63d7fc790485ae46ab58da47"
+	},
+	"skills": [
+		"C++",
+		"Python",
+		"Java",
+		"Javascript",
+		"React",
+		"Django"
+	],
+	"education": [
+		{
+			"name": "Shri Ramdeobaba College of Engineering and Management",
+			"degree": "BE CSE",
+			"start": "2020",
+			"end": "2024",
+			"_id": "63d7fc790485ae46ab58da48"
+		}
+	],
+	"projects": [
+		{
+			"name": "College Wit",
+			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+			"link": "https://collegewit.netlify.app/",
+			"_id": "63d7fc790485ae46ab58da49"
+		},
+		{
+			"name": "Resume Builder",
+			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+			"link": "https://collegewit.netlify.app/",
+			"_id": "63d7fc790485ae46ab58da4a"
+		},
+		{
+			"name": "Gadget Reviewer",
+			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+			"link": "https://collegewit.netlify.app/",
+			"_id": "63d7fc790485ae46ab58da4b"
+		}
+	],
+	"achievements": [
+		{
+			"name": "SIH'22 Finalist",
+			"cerlink": "https://collegewit.netlify.app/",
+			"_id": "63d7fc790485ae46ab58da4c"
+		},
+		{
+			"name": "ach2",
+			"cerlink": "https://collegewit.netlify.app/",
+			"_id": "63d7fc790485ae46ab58da4d"
+		}
+	],
+	"experience": [
+		{
+			"name": "Qodeit",
+			"role": "Backend Developer",
+			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members",
+			"start": "11-Oct-2022",
+			"end": "11-Dec-2022",
+			"_id": "63d7fc790485ae46ab58da4e"
+		},
+		{
+			"name": "Briefly",
+			"role": "Frontend Developer",
+			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members",
+			"start": "11-Oct-2022",
+			"end": "11-Dec-2022",
+			"_id": "63d7fc790485ae46ab58da4f"
+		}
+	],
+	"createdAt": "2023-01-30T17:20:57.302Z",
+	"updatedAt": "2023-01-30T17:20:57.302Z",
+	"__v": 0
+}
 
 ///// API calling code
 //// Json data of resume
@@ -68,12 +153,12 @@ function Template() {
               color: "#003f88",
             }}
           >
-            {name}
+            {dummydata.personal.name}
           </Typography>
           <Typography
             sx={{ fontSize: "15px", color: "#6c757d", fontWeight: "bold" }}
           >
-            Data Scientist
+            {dummydata.personal.role}
           </Typography>
           <Typography
             sx={{
@@ -82,7 +167,7 @@ function Template() {
               letterSpacing: "0px",
             }}
           >
-            {dummydata}
+            {dummydata.personal.bio}
           </Typography>
           {/* ------------------- Work Experience ------------------- */}
 
@@ -91,57 +176,44 @@ function Template() {
 
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>Data Scientist</Typography>
-              <Typography sx={Styles.workexp2}>2019 - Present</Typography>
+              <Typography sx={Styles.workexp1}>{dummydata.experience[0].role}</Typography>
+              <Typography sx={Styles.workexp2}>{dummydata.experience[0].start} - {dummydata.experience[0].end}</Typography>
             </Grid>
             <Typography sx={Styles.workexp3}>
-              Resume Worded, New York, NY
+              {dummydata.experience[0].name}
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● Launched Miami office with lead Director and recruited a new
-              team of 10 employees; grew office revenue by 200% in first nine
-              months (representing 20% of company revenue). Led redesign of
-              mobile app and website. <br />
-              ● Led the first major effort to A/B test the company's e-commerce
-              sales page and optimize it for customer acquisition; resulted in a
-              7.5% increase in conversions <br />
+              ● {dummydata.experience[0].info}<br />
+              ● {dummydata.experience[0].info}<br />
             </Typography>
           </Grid>
 
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>Data Scientist</Typography>
-              <Typography sx={Styles.workexp2}>2019 - Present</Typography>
+              <Typography sx={Styles.workexp1}>{dummydata.experience[0].role}</Typography>
+              <Typography sx={Styles.workexp2}>{dummydata.experience[0].start} - {dummydata.experience[0].end}</Typography>
             </Grid>
             <Typography sx={Styles.workexp3}>
-              Resume Worded, New York, NY
+              {dummydata.experience[0].name}
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● Launched Miami office with lead Director and recruited a new
-              team of 10 employees; grew office revenue by 200% in first nine
-              months (representing 20% of company revenue). Led redesign of
-              mobile app and website. <br />
-              ● Led the first major effort to A/B test the company's e-commerce
-              sales page and optimize it for customer acquisition; resulted in a
-              7.5% increase in conversions <br />
+              ● {dummydata.experience[0].info}<br />
+              ● {dummydata.experience[0].info}<br />
             </Typography>
           </Grid>
+
+          {/* ------------------- Projects ------------------- */}
+          <Typography sx={Styles.subheading}>Projects</Typography>
+          <Divider sx={{ width: "80%", mt: 1, mb: 2 }} />
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>Data Scientist</Typography>
-              <Typography sx={Styles.workexp2}>2019 - Present</Typography>
+               <Typography sx={Styles.workexp1}>{dummydata.projects[0].name}</Typography>
             </Grid>
-            <Typography sx={Styles.workexp3}>
-              Resume Worded, New York, NY
+            <Typography sx={Styles.workexp4}>
+              ● {dummydata.projects[0].info}<br />
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● Launched Miami office with lead Director and recruited a new
-              team of 10 employees; grew office revenue by 200% in first nine
-              months (representing 20% of company revenue). Led redesign of
-              mobile app and website. <br />
-              ● Led the first major effort to A/B test the company's e-commerce
-              sales page and optimize it for customer acquisition; resulted in a
-              7.5% increase in conversions <br />
+              ● {dummydata.projects[0].link}<br />
             </Typography>
           </Grid>
         </Grid>
@@ -159,13 +231,13 @@ function Template() {
             <Typography sx={{ fontSize: "15px" }}>Contact</Typography>
             <Divider sx={{ width: "80%", my: 1, color: "black" }} />
             <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
-              • Denver, OH <br />
-              • +1-234-456-789
+              • Naagpur, MH <br />
+              • {dummydata.personal.contact}
               <br />
-              • email@resumeworded.com <br />
-              • linkedin.com/in/username
+              • {dummydata.personal.email}<br />
+              • {dummydata.personal.linkedin}
               <br />
-              • github.com/resumeworded
+              • {dummydata.personal.github}
               <br />
             </Typography>
           </Grid>
@@ -175,14 +247,21 @@ function Template() {
           <Grid container sx={{ my: 3, justifyContent: "center" }}>
             <Typography sx={{ fontSize: "15px" }}>Skills</Typography>
             <Divider sx={{ width: "90%", my: 1, color: "black" }} />
-            <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
+            {dummydata.skills.map((skill)=>{
+                return (
+                  <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
+                    • {skill} <br />
+                  </Typography>
+            );})}
+            {/* <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
               • Python <br />
               • R <br />
               • SQL <br />
               • Tableau <br />
               • Machine Learning <br />
               • Deep Learning <br />
-            </Typography>
+              • Python <br />
+            </Typography> */}
           </Grid>
 
           {/* ------------------------ Education ------------------------ */}
@@ -198,18 +277,12 @@ function Template() {
                 fontWeight: "bold",
               }}
             >
-              Resume Worded University{" "}
+              {dummydata.education[0].name}
             </Typography>
             <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 2 }}>
-              <li> Bachelor of Engineering </li>
+              <li> {dummydata.education[0].degree} </li>
               <li>
-                {" "}
-                Major in Computer Science Minors in Mathematics and Statistics
-                Boston, MA — May 2018
-              </li>
-              <li>
-                Awards: Resume Worded Teaching Fellow (only 5 awarded to class),
-                Dean’s List 2012 (Top 10%)
+                City Name, {dummydata.experience[0].start} — {dummydata.experience[0].end}
               </li>
             </Typography>
           </Grid>

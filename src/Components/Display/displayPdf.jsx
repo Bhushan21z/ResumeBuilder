@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import { render } from 'react-dom';
 import Button from "@mui/material/Button";
 import jsPDF from "jspdf";
-import Template from "./Template2";
+import Template from "./Template1";
 // import Heading from '../Reports/Heading';
 // import Analysis from '../Reports/Analysis';
 import "./tempstyle.css";
