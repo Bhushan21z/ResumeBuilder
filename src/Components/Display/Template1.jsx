@@ -43,7 +43,7 @@ const Styles = {
 // var name = "Bhushan Wanjari";
 
 var dummydata={
-	"_id": "63d7fc790485ae46ab58da46",
+	"_id": "63d80cd760de3c53756de372",
 	"email": "bhushanwanjari@gmail.com",
 	"personal": {
 		"name": "Bhushan Wanjari",
@@ -53,7 +53,7 @@ var dummydata={
 		"github": "bhushan-wanjari-952042213/",
 		"email": "wanjaribl@rknec.edu",
 		"bio": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-		"_id": "63d7fc790485ae46ab58da47"
+		"_id": "63d80cd760de3c53756de373"
 	},
 	"skills": [
 		"C++",
@@ -67,63 +67,79 @@ var dummydata={
 		{
 			"name": "Shri Ramdeobaba College of Engineering and Management",
 			"degree": "BE CSE",
+			"city": "Nagpur",
 			"start": "2020",
 			"end": "2024",
-			"_id": "63d7fc790485ae46ab58da48"
+			"_id": "63d80cd760de3c53756de374"
 		}
 	],
 	"projects": [
 		{
 			"name": "College Wit",
-			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+			"info": [
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
+			],
 			"link": "https://collegewit.netlify.app/",
-			"_id": "63d7fc790485ae46ab58da49"
+			"_id": "63d80cd760de3c53756de375"
 		},
 		{
 			"name": "Resume Builder",
-			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+			"info": [
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
+			],
 			"link": "https://collegewit.netlify.app/",
-			"_id": "63d7fc790485ae46ab58da4a"
+			"_id": "63d80cd760de3c53756de376"
 		},
 		{
 			"name": "Gadget Reviewer",
-			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+			"info": [
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
+			],
 			"link": "https://collegewit.netlify.app/",
-			"_id": "63d7fc790485ae46ab58da4b"
+			"_id": "63d80cd760de3c53756de377"
 		}
 	],
 	"achievements": [
 		{
 			"name": "SIH'22 Finalist",
 			"cerlink": "https://collegewit.netlify.app/",
-			"_id": "63d7fc790485ae46ab58da4c"
+			"_id": "63d80cd760de3c53756de378"
 		},
 		{
 			"name": "ach2",
 			"cerlink": "https://collegewit.netlify.app/",
-			"_id": "63d7fc790485ae46ab58da4d"
+			"_id": "63d80cd760de3c53756de379"
 		}
 	],
 	"experience": [
 		{
 			"name": "Qodeit",
 			"role": "Backend Developer",
-			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members",
+			"info": [
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
+			],
 			"start": "11-Oct-2022",
 			"end": "11-Dec-2022",
-			"_id": "63d7fc790485ae46ab58da4e"
+			"_id": "63d80cd760de3c53756de37a"
 		},
 		{
 			"name": "Briefly",
 			"role": "Frontend Developer",
-			"info": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members",
+			"info": [
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
+			],
 			"start": "11-Oct-2022",
 			"end": "11-Dec-2022",
-			"_id": "63d7fc790485ae46ab58da4f"
+			"_id": "63d80cd760de3c53756de37b"
 		}
 	],
-	"createdAt": "2023-01-30T17:20:57.302Z",
-	"updatedAt": "2023-01-30T17:20:57.302Z",
+	"createdAt": "2023-01-30T18:30:47.998Z",
+	"updatedAt": "2023-01-30T18:30:47.998Z",
 	"__v": 0
 }
 
@@ -183,8 +199,8 @@ function Template() {
               {dummydata.experience[0].name}
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.experience[0].info}<br />
-              ● {dummydata.experience[0].info}<br />
+              ● {dummydata.experience[0].info[0]}<br />
+              ● {dummydata.experience[0].info[1]}<br />
             </Typography>
           </Grid>
 
@@ -197,8 +213,8 @@ function Template() {
               {dummydata.experience[0].name}
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.experience[0].info}<br />
-              ● {dummydata.experience[0].info}<br />
+              ● {dummydata.experience[0].info[0]}<br />
+              ● {dummydata.experience[0].info[1]}<br />
             </Typography>
           </Grid>
 
@@ -210,7 +226,7 @@ function Template() {
                <Typography sx={Styles.workexp1}>{dummydata.projects[0].name}</Typography>
             </Grid>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.projects[0].info}<br />
+              ● {dummydata.projects[0].info[0]}<br />
             </Typography>
             <Typography sx={Styles.workexp4}>
               ● {dummydata.projects[0].link}<br />
