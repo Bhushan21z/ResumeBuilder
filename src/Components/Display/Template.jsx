@@ -14,32 +14,32 @@ const data = [
   {
     title: "Template 1",
     image: Template1,
-    link: "/resume/1",
+    no: 1,
   },
   {
     title: "Template 2",
     image: Template2,
-    link: "/resume/2",
+    no: 2,
   },
   {
     title: "Template 3",
     image: Template3,
-    link: "/resume/3",
+    no: 3,
   },
   {
     title: "Template 4",
     image: Template4,
-    link: "/resume/4",
+    no: 4,
   },
   {
     title: "Template 5",
     image: Template4,
-    link: "/resume/5",
+    no: 5,
   },
   {
     title: "Template 6",
     image: Template4,
-    link: "/resume/6",
+    no: 6,
   },
 ];
 
@@ -75,10 +75,7 @@ const Template = () => {
       >
         {/* <Grid item> */}
         {data.map((item) => (
-          <Link
-            to={{ pathname: "/resume", hash: item.title }}
-            style={{ textDecoration: "None" }}
-          >
+          <Link to="/display" style={{ textDecoration: "None" }}>
             <Card
               sx={{
                 width: "auto",

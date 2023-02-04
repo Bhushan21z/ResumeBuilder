@@ -12,6 +12,21 @@ const styles = {
     mx: 3,
     p: 2,
   },
+  typo: {
+    color: "#FFF",
+    fontWeight: "bold",
+    fontSize: "120px",
+    fontFamily: "Roboto",
+    lineHeight: "1",
+  },
+  btn: {
+    backgroundColor: "#FFF",
+    color: "#0b132b",
+    mt: "20px",
+    width: "60%",
+    height: "80px",
+    boxShadow: "1px 1px 1px 1px #3a506b",
+  },
 };
 
 const Homepage = () => {
@@ -43,15 +58,7 @@ const Homepage = () => {
         >
           <Grid container spacing={2} justifyContent="center">
             <Grid item xs={7}>
-              <Typography
-                sx={{
-                  color: "#FFF",
-                  fontWeight: "bold",
-                  fontSize: "120px",
-                  fontFamily: "Roboto",
-                  lineHeight: "1",
-                }}
-              >
+              <Typography sx={styles.typo}>
                 Resume <br />
                 <span
                   style={{
@@ -61,7 +68,7 @@ const Homepage = () => {
                     fontFamily: "Roboto",
                   }}
                 >
-                  Analyser
+                  Builder
                 </span>
               </Typography>
 
@@ -76,17 +83,7 @@ const Homepage = () => {
                 Analyse your resume and get your score. <br />
               </Typography>
 
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "#FFF",
-                  color: "#0b132b",
-                  mt: "20px",
-                  width: "60%",
-                  height: "80px",
-                  boxShadow: "1px 1px 1px 1px #3a506b",
-                }}
-              >
+              <Button variant="contained" sx={styles.btn}>
                 <Typography sx={{ fontSize: "20px" }}>
                   Get Started <span style={{ fontSize: "30px" }}> &#8594;</span>
                 </Typography>

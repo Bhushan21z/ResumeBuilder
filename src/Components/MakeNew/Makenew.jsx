@@ -92,7 +92,7 @@ const Makenew = () => {
       //     console.log(res);
       //     setActiveStep(activeStep + 1);
       //   });
-      navigate("/display", { state: TemplateNo });
+      navigate("/templates");
     } else {
       setActiveStep(activeStep + 1);
       setSkippedSteps(

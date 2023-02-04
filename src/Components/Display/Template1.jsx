@@ -42,106 +42,94 @@ const Styles = {
 //   "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.";
 // var name = "Bhushan Wanjari";
 
-var dummydata={
-	"_id": "63d80cd760de3c53756de372",
-	"email": "bhushanwanjari@gmail.com",
-	"personal": {
-		"name": "Bhushan Wanjari",
-		"position": "Software Engineer",
-		"contact": "7709317844",
-		"linkedin": "bhushan-wanjari-952042213/",
-		"github": "bhushan-wanjari-952042213/",
-		"email": "wanjaribl@rknec.edu",
-		"bio": "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-		"_id": "63d80cd760de3c53756de373"
-	},
-	"skills": [
-		"C++",
-		"Python",
-		"Java",
-		"Javascript",
-		"React",
-		"Django"
-	],
-	"education": [
-		{
-			"name": "Shri Ramdeobaba College of Engineering and Management",
-			"degree": "BE CSE",
-			"city": "Nagpur",
-			"start": "2020",
-			"end": "2024",
-			"_id": "63d80cd760de3c53756de374"
-		}
-	],
-	"projects": [
-		{
-			"name": "College Wit",
-			"info": [
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
-			],
-			"link": "https://collegewit.netlify.app/",
-			"_id": "63d80cd760de3c53756de375"
-		},
-		{
-			"name": "Resume Builder",
-			"info": [
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
-			],
-			"link": "https://collegewit.netlify.app/",
-			"_id": "63d80cd760de3c53756de376"
-		},
-		{
-			"name": "Gadget Reviewer",
-			"info": [
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
-			],
-			"link": "https://collegewit.netlify.app/",
-			"_id": "63d80cd760de3c53756de377"
-		}
-	],
-	"achievements": [
-		{
-			"name": "SIH'22 Finalist",
-			"cerlink": "https://collegewit.netlify.app/",
-			"_id": "63d80cd760de3c53756de378"
-		},
-		{
-			"name": "ach2",
-			"cerlink": "https://collegewit.netlify.app/",
-			"_id": "63d80cd760de3c53756de379"
-		}
-	],
-	"experience": [
-		{
-			"name": "Qodeit",
-			"role": "Backend Developer",
-			"info": [
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
-			],
-			"start": "11-Oct-2022",
-			"end": "11-Dec-2022",
-			"_id": "63d80cd760de3c53756de37a"
-		},
-		{
-			"name": "Briefly",
-			"role": "Frontend Developer",
-			"info": [
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
-				"Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members."
-			],
-			"start": "11-Oct-2022",
-			"end": "11-Dec-2022",
-			"_id": "63d80cd760de3c53756de37b"
-		}
-	],
-	"createdAt": "2023-01-30T18:30:47.998Z",
-	"updatedAt": "2023-01-30T18:30:47.998Z",
-	"__v": 0
-}
+var dummydata = {
+  _id: "63d80cd760de3c53756de372",
+  email: "bhushanwanjari@gmail.com",
+  personal: {
+    name: "Bhushan Wanjari",
+    position: "Software Engineer",
+    contact: "7709317844",
+    linkedin: "bhushan-wanjari-952042213/",
+    github: "bhushan-wanjari-952042213/",
+    email: "wanjaribl@rknec.edu",
+    bio: "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+    _id: "63d80cd760de3c53756de373",
+  },
+  skills: ["C++", "Python", "Java", "Javascript", "React", "Django"],
+  education: [
+    {
+      name: "Shri Ramdeobaba College of Engineering and Management",
+      degree: "BE CSE",
+      city: "Nagpur",
+      start: "2020",
+      end: "2024",
+      _id: "63d80cd760de3c53756de374",
+    },
+  ],
+  projects: [
+    {
+      name: "College Wit",
+      info: [
+        "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+      ],
+      link: "https://collegewit.netlify.app/",
+      _id: "63d80cd760de3c53756de375",
+    },
+    {
+      name: "Resume Builder",
+      info: [
+        "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+      ],
+      link: "https://collegewit.netlify.app/",
+      _id: "63d80cd760de3c53756de376",
+    },
+    {
+      name: "Gadget Reviewer",
+      info: [
+        "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+      ],
+      link: "https://collegewit.netlify.app/",
+      _id: "63d80cd760de3c53756de377",
+    },
+  ],
+  achievements: [
+    {
+      name: "SIH'22 Finalist",
+      cerlink: "https://collegewit.netlify.app/",
+      _id: "63d80cd760de3c53756de378",
+    },
+    {
+      name: "ach2",
+      cerlink: "https://collegewit.netlify.app/",
+      _id: "63d80cd760de3c53756de379",
+    },
+  ],
+  experience: [
+    {
+      name: "Qodeit",
+      role: "Backend Developer",
+      info: [
+        "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+      ],
+      start: "11-Oct-2022",
+      end: "11-Dec-2022",
+      _id: "63d80cd760de3c53756de37a",
+    },
+    {
+      name: "Briefly",
+      role: "Frontend Developer",
+      info: [
+        "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+      ],
+      start: "11-Oct-2022",
+      end: "11-Dec-2022",
+      _id: "63d80cd760de3c53756de37b",
+    },
+  ],
+  createdAt: "2023-01-30T18:30:47.998Z",
+  updatedAt: "2023-01-30T18:30:47.998Z",
+  __v: 0,
+};
 
 ///// API calling code
 //// Json data of resume
@@ -192,29 +180,39 @@ function Template() {
 
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>{dummydata.experience[0].role}</Typography>
-              <Typography sx={Styles.workexp2}>{dummydata.experience[0].start} - {dummydata.experience[0].end}</Typography>
+              <Typography sx={Styles.workexp1}>
+                {dummydata.experience[0].role}
+              </Typography>
+              <Typography sx={Styles.workexp2}>
+                {dummydata.experience[0].start} - {dummydata.experience[0].end}
+              </Typography>
             </Grid>
             <Typography sx={Styles.workexp3}>
               {dummydata.experience[0].name}
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.experience[0].info[0]}<br />
-              ● {dummydata.experience[0].info[1]}<br />
+              ● {dummydata.experience[0].info[0]}
+              <br />● {dummydata.experience[0].info[1]}
+              <br />
             </Typography>
           </Grid>
 
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
-              <Typography sx={Styles.workexp1}>{dummydata.experience[0].role}</Typography>
-              <Typography sx={Styles.workexp2}>{dummydata.experience[0].start} - {dummydata.experience[0].end}</Typography>
+              <Typography sx={Styles.workexp1}>
+                {dummydata.experience[0].role}
+              </Typography>
+              <Typography sx={Styles.workexp2}>
+                {dummydata.experience[0].start} - {dummydata.experience[0].end}
+              </Typography>
             </Grid>
             <Typography sx={Styles.workexp3}>
               {dummydata.experience[0].name}
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.experience[0].info[0]}<br />
-              ● {dummydata.experience[0].info[1]}<br />
+              ● {dummydata.experience[0].info[0]}
+              <br />● {dummydata.experience[0].info[1]}
+              <br />
             </Typography>
           </Grid>
 
@@ -223,13 +221,17 @@ function Template() {
           <Divider sx={{ width: "80%", mt: 1, mb: 2 }} />
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
-               <Typography sx={Styles.workexp1}>{dummydata.projects[0].name}</Typography>
+              <Typography sx={Styles.workexp1}>
+                {dummydata.projects[0].name}
+              </Typography>
             </Grid>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.projects[0].info[0]}<br />
+              ● {dummydata.projects[0].info[0]}
+              <br />
             </Typography>
             <Typography sx={Styles.workexp4}>
-              ● {dummydata.projects[0].link}<br />
+              ● {dummydata.projects[0].link}
+              <br />
             </Typography>
           </Grid>
         </Grid>
@@ -247,13 +249,10 @@ function Template() {
             <Typography sx={{ fontSize: "15px" }}>Contact</Typography>
             <Divider sx={{ width: "80%", my: 1, color: "black" }} />
             <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
-              • Naagpur, MH <br />
-              • {dummydata.personal.contact}
-              <br />
-              • {dummydata.personal.email}<br />
-              • {dummydata.personal.linkedin}
-              <br />
-              • {dummydata.personal.github}
+              • Naagpur, MH <br />• {dummydata.personal.contact}
+              <br />• {dummydata.personal.email}
+              <br />• {dummydata.personal.linkedin}
+              <br />• {dummydata.personal.github}
               <br />
             </Typography>
           </Grid>
@@ -263,12 +262,13 @@ function Template() {
           <Grid container sx={{ my: 3, justifyContent: "center" }}>
             <Typography sx={{ fontSize: "15px" }}>Skills</Typography>
             <Divider sx={{ width: "90%", my: 1, color: "black" }} />
-            {dummydata.skills.map((skill)=>{
-                return (
-                  <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
-                    • {skill} <br />
-                  </Typography>
-            );})}
+            {dummydata.skills.map((skill) => {
+              return (
+                <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
+                  • {skill} <br />
+                </Typography>
+              );
+            })}
             {/* <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 1 }}>
               • Python <br />
               • R <br />
@@ -298,7 +298,8 @@ function Template() {
             <Typography sx={{ fontSize: "12px", color: "#6c757d", mx: 2 }}>
               <li> {dummydata.education[0].degree} </li>
               <li>
-                City Name, {dummydata.experience[0].start} — {dummydata.experience[0].end}
+                City Name, {dummydata.experience[0].start} —{" "}
+                {dummydata.experience[0].end}
               </li>
             </Typography>
           </Grid>

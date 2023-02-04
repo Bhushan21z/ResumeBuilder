@@ -14,7 +14,6 @@ import Form from "./Pages/form";
 import Forgotpswd from "./Pages/Forgotpswd";
 import Otp2 from "./Pages/Otp2";
 
-
 const App = () => {
   return (
     <div>
@@ -24,8 +23,8 @@ const App = () => {
         <Route path="register" element={<Signup />} />
         <Route path="otp" element={<Otp />} />
         <Route path="login" element={<Signin />} />
-        <Route path="makenew" element={<Templates />} />
-        <Route path="resume" element={<ResumeBuilder />} />
+        <Route path="makenew" element={<ResumeBuilder />} />
+        <Route path="templates" element={<Templates />} />
         <Route path="report" element={<Report />} />
         <Route path="profile" element={<Profile />} />
         <Route path="editprofile" element={<EditProfile />} />

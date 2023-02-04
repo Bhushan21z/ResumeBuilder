@@ -4,7 +4,11 @@ import Appbar from "../Components/Appbar";
 import Footer from "../Components/Footer";
 const Display = () => {
   return (
-    <div>
+    <div
+      style={{
+        backgroundColor: "#1c2541",
+      }}
+    >
       <Appbar />
       <DisplayResume />
       <Footer />

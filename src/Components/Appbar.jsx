@@ -22,9 +22,10 @@ const buttons = ["Login", "Register"];
 export default function Appbar() {
   return (
     <AppBar
+      position="static"
       sx={{
         backgroundColor: "transparent",
-        height: "150px",
+        height: "auto",
         boxShadow: "none",
       }}
     >
