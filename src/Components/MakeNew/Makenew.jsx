@@ -16,6 +16,7 @@ import Personal from "./AllPages/Personal";
 import Education from "./AllPages/Education";
 import WorkExp from "./AllPages/WorkExp";
 import Achievements from "./AllPages/Achievements";
+import Projects from "./AllPages/Projects";
 
 function getSteps() {
   return [
@@ -23,6 +24,7 @@ function getSteps() {
     "Education Information",
     "Work Experience",
     "Achievements",
+    "Projects",
   ];
 }
 
@@ -36,6 +38,8 @@ function getStepContent(step) {
       return <WorkExp />;
     case 3:
       return <Achievements />;
+    case 4:
+      return <Projects />;
     default:
       return "unknown step";
   }
@@ -43,14 +47,6 @@ function getStepContent(step) {
 
 const Makenew = () => {
   const navigate = useNavigate();
-  // const classes = useStyles();
-
-  const location = useLocation();
-  var tempno = location.hash;
-  var TemplateNo = {
-    tempno: tempno.charAt(tempno.length - 1),
-  };
-  console.log(TemplateNo);
 
   const methods = useForm({
     defaultValues: {
@@ -72,32 +68,14 @@ const Makenew = () => {
     },
   });
   const [activeStep, setActiveStep] = useState(0);
-  const [skippedSteps, setSkippedSteps] = useState([]);
   const steps = getSteps();
-
-  const isStepOptional = (step) => {
-    return step === 1 || step === 2;
-  };
-
-  const isStepSkipped = (step) => {
-    return skippedSteps.includes(step);
-  };
 
   const handleNext = (data) => {
     console.log(data);
     if (activeStep === steps.length - 1) {
-      // fetch("https://jsonplaceholder.typicode.com/comments")
-      //   .then((data) => data.json())
-      //   .then((res) => {
-      //     console.log(res);
-      //     setActiveStep(activeStep + 1);
-      //   });
       navigate("/templates");
     } else {
       setActiveStep(activeStep + 1);
-      setSkippedSteps(
-        skippedSteps.filter((skipItem) => skipItem !== activeStep)
-      );
     }
   };
 
@@ -105,72 +83,53 @@ const Makenew = () => {
     setActiveStep(activeStep - 1);
   };
 
-  const handleSkip = () => {
-    if (!isStepSkipped(activeStep)) {
-      setSkippedSteps([...skippedSteps, activeStep]);
-    }
-    setActiveStep(activeStep + 1);
-  };
-
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  // };
   return (
     <div>
-      <Box
+      <Grid
+        container
         sx={{
           width: "100%",
           padding: "5%",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "#f5f5f5",
+          backgroundColor: "#0b132b",
         }}
       >
-        <Typography
-          variant="h4"
-          sx={{
-            fontWeight: "bold",
-            color: "#000",
-            textAlign: "center",
-            marginBottom: "3%",
-          }}
-        >
-          <GradingIcon
+        <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+          <Typography
+            variant="h4"
             sx={{
-              fontSize: "3rem",
-              color: "#000",
-              marginRight: "10px",
+              fontWeight: "bold",
+              color: "#fff",
+              textAlign: "center",
+              marginBottom: "3%",
             }}
-          />
-          Resume Builder
-        </Typography>
+          >
+            <GradingIcon
+              sx={{
+                fontSize: "2rem",
+                color: "#fff",
+                marginRight: "10px",
+              }}
+            />
+            Resume Builder
+          </Typography>
+        </Grid>
 
         <Grid
           sx={{
+            width: "70%",
             padding: "2%",
-            // backgroundColor: "#809bce",
+            backgroundColor: "#fff",
             borderRadius: "10px",
-            border: "1px solid #809bce",
+            border: "1px solid #1c2541",
           }}
         >
           <Stepper alternativeLabel activeStep={activeStep}>
             {steps.map((step, index) => {
               const labelProps = {};
               const stepProps = {};
-              if (isStepOptional(index)) {
-                labelProps.optional = (
-                  <Typography
-                    variant="caption"
-                    align="center"
-                    style={{ display: "block" }}
-                  >
-                    optional
-                  </Typography>
-                );
-              }
-              if (isStepSkipped(index)) {
-                stepProps.completed = false;
-              }
+
               return (
                 <Step {...stepProps} key={index}>
                   <StepLabel {...labelProps}>{step}</StepLabel>
@@ -190,30 +149,17 @@ const Makenew = () => {
                   {getStepContent(activeStep)}
 
                   <Button
-                    // className={classes.button}
                     sx={{ mr: 1 }}
                     disabled={activeStep === 0}
                     onClick={handleBack}
                   >
                     back
                   </Button>
-                  {isStepOptional(activeStep) && (
-                    <Button
-                      // className={classes.button}
-                      sx={{ mr: 1 }}
-                      variant="contained"
-                      color="primary"
-                      onClick={handleSkip}
-                    >
-                      skip
-                    </Button>
-                  )}
+
                   <Button
-                    // className={classes.button}
                     sx={{ mr: 1 }}
                     variant="contained"
                     color="primary"
-                    // onClick={handleNext}
                     type="submit"
                   >
                     {activeStep === steps.length - 1 ? "Finish" : "Next"}
@@ -223,7 +169,7 @@ const Makenew = () => {
             </>
           )}
         </Grid>
-      </Box>
+      </Grid>
     </div>
   );
 };

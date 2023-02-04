@@ -1,14 +1,14 @@
 import React from "react";
 import "./tempstyle.css";
 import Grid from "@mui/material/Grid";
-import { Divider, Typography } from "@mui/material";
+import { Divider, Icon, Typography } from "@mui/material";
 
 const Styles = {
   subheading: {
     fontWeight: "bold",
     fontSize: "15px",
     color: "#003f88",
-    mt: 3,
+    mt: 2,
     mb: 1,
   },
 
@@ -22,11 +22,10 @@ const Styles = {
     fontSize: "12px",
     color: "#6c757d",
     mr: 2,
-
-    fontWeight: "bold",
+    // fontWeight: "bold",
   },
   workexp3: {
-    fontSize: "12px",
+    fontSize: "15px",
     color: "#6c757d",
     mb: 1,
     fontWeight: "bold",
@@ -52,7 +51,7 @@ var dummydata = {
     linkedin: "bhushan-wanjari-952042213/",
     github: "bhushan-wanjari-952042213/",
     email: "wanjaribl@rknec.edu",
-    bio: "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+    bio: "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies.",
     _id: "63d80cd760de3c53756de373",
   },
   skills: ["C++", "Python", "Java", "Javascript", "React", "Django"],
@@ -109,7 +108,7 @@ var dummydata = {
       name: "Qodeit",
       role: "Backend Developer",
       info: [
-        "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+        "Data Scientist with three years of experience in analyzing large data sets ",
       ],
       start: "11-Oct-2022",
       end: "11-Dec-2022",
@@ -141,7 +140,7 @@ function Template() {
         container
         xs={12}
         sx={{
-          py: 4,
+          py: 2,
           px: 3,
           width: "587px",
           height: "834px",
@@ -153,22 +152,20 @@ function Template() {
           <Typography
             sx={{
               fontWeight: "bold",
-              fontSize: "30px",
+              fontSize: "25px",
               color: "#003f88",
             }}
           >
             {dummydata.personal.name}
           </Typography>
-          <Typography
-            sx={{ fontSize: "15px", color: "#6c757d", fontWeight: "bold" }}
-          >
-            {dummydata.personal.role}
+          <Typography sx={{ fontSize: "15px", color: "#6c757d" }}>
+            {dummydata.personal.position}
           </Typography>
           <Typography
             sx={{
               fontSize: "12px",
               color: "#6c757d",
-              letterSpacing: "0px",
+              mt: 1,
             }}
           >
             {dummydata.personal.bio}
@@ -192,8 +189,6 @@ function Template() {
             </Typography>
             <Typography sx={Styles.workexp4}>
               ● {dummydata.experience[0].info[0]}
-              <br />● {dummydata.experience[0].info[1]}
-              <br />
             </Typography>
           </Grid>
 
@@ -211,14 +206,27 @@ function Template() {
             </Typography>
             <Typography sx={Styles.workexp4}>
               ● {dummydata.experience[0].info[0]}
-              <br />● {dummydata.experience[0].info[1]}
-              <br />
             </Typography>
           </Grid>
 
           {/* ------------------- Projects ------------------- */}
           <Typography sx={Styles.subheading}>Projects</Typography>
           <Divider sx={{ width: "80%", mt: 1, mb: 2 }} />
+          <Grid container sx={{ my: 2 }}>
+            <Grid container justifyContent="space-between">
+              <Typography sx={Styles.workexp1}>
+                {dummydata.projects[0].name}
+              </Typography>
+            </Grid>
+            <Typography sx={Styles.workexp4}>
+              ● {dummydata.projects[0].info[0]}
+              <br />
+            </Typography>
+            <Typography sx={Styles.workexp4}>
+              ● {dummydata.projects[0].link}
+              <br />
+            </Typography>
+          </Grid>
           <Grid container sx={{ my: 2 }}>
             <Grid container justifyContent="space-between">
               <Typography sx={Styles.workexp1}>

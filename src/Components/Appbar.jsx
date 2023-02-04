@@ -24,7 +24,7 @@ export default function Appbar() {
     <AppBar
       position="static"
       sx={{
-        backgroundColor: "transparent",
+        backgroundColor: "#0b132b",
         height: "auto",
         boxShadow: "none",
       }}

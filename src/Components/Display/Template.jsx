@@ -49,7 +49,7 @@ const Template = () => {
       <Typography
         variant="h4"
         sx={{
-          mt: "150px",
+          mt: "50px",
           fontWeight: "bold",
           color: "#000",
           textAlign: "center",

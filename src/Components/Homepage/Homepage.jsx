@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Grid, Typography } from "@mui/material";
 import Lottie from "react-lottie";
+import { Link } from "react-router-dom";
 import * as animationData from "../../Assets/resume1.json";
 
 const styles = {
@@ -83,11 +84,14 @@ const Homepage = () => {
                 Analyse your resume and get your score. <br />
               </Typography>
 
-              <Button variant="contained" sx={styles.btn}>
-                <Typography sx={{ fontSize: "20px" }}>
-                  Get Started <span style={{ fontSize: "30px" }}> &#8594;</span>
-                </Typography>
-              </Button>
+              <Link to="/makenew" style={{ textDecoration: "None" }}>
+                <Button variant="contained" sx={styles.btn}>
+                  <Typography sx={{ fontSize: "20px" }}>
+                    Get Started{" "}
+                    <span style={{ fontSize: "30px" }}> &#8594;</span>
+                  </Typography>
+                </Button>
+              </Link>
             </Grid>
             <Grid
               item

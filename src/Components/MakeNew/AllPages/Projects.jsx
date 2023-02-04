@@ -1,9 +1,10 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import { Typography } from "@mui/material";
 import { Controller, useFormContext } from "react-hook-form";
 
-const Personal = () => {
+const Projects = () => {
   const { control } = useFormContext();
   return (
     <Box
@@ -11,106 +12,103 @@ const Personal = () => {
       sx={{
         m: "70px",
       }}
-      Validate
-      autoComplete="on"
+      noValidate
+      autoComplete="off"
     >
       <div>
+        <Typography variant="h5" sx={{ mt: 2 }}>
+          Project 1
+        </Typography>
+
         <Controller
           control={control}
-          name="firstName"
+          name="title"
           render={({ field }) => (
             <TextField
-              id="name"
-              label="Full Name"
+              id="title"
+              label="Title"
               variant="outlined"
-              placeholder="Enter Your Full Name"
+              placeholder="Enter Your Project Title"
               fullWidth
-              required
               margin="normal"
               {...field}
             />
           )}
         />
-
         <Controller
           control={control}
-          name="lastName"
+          name="link"
           render={({ field }) => (
             <TextField
-              id="role"
-              label="Role"
+              id="link"
+              label="Link"
               variant="outlined"
-              placeholder="Enter Role/ Designation/ Position"
+              placeholder="Github/Website Link/Video/Other"
               fullWidth
-              required
               margin="normal"
               {...field}
             />
           )}
         />
-
         <Controller
           control={control}
-          name="Email"
+          name="info"
           render={({ field }) => (
             <TextField
-              id="email"
-              label="EmailId"
+              id="info"
+              label="Description"
               variant="outlined"
-              placeholder="Enter Your Email"
+              placeholder="Describe your project"
               fullWidth
-              required
               margin="normal"
               {...field}
             />
           )}
         />
+        <Typography variant="h5" sx={{ mt: 2 }}>
+          Project 2
+        </Typography>
 
         <Controller
           control={control}
-          name="LinkedIn"
+          name="title"
           render={({ field }) => (
             <TextField
-              id="linkedin"
-              label="Linkedin"
+              id="title"
+              label="Title"
               variant="outlined"
-              placeholder="Enter Your LinkedIn Url"
+              placeholder="Enter Your Project Title"
               fullWidth
-              required
               margin="normal"
               {...field}
             />
           )}
         />
-
         <Controller
           control={control}
-          name="Github"
+          name="link"
           render={({ field }) => (
             <TextField
-              id="Github"
-              label="Github"
+              id="link"
+              label="Link"
               variant="outlined"
-              placeholder="Enter Your Github Id"
+              placeholder="Github/Website Link/Video/Other"
               fullWidth
-              required
               margin="normal"
               {...field}
             />
           )}
         />
-
         <Controller
           control={control}
-          name="Phone"
+          name="info"
           render={({ field }) => (
             <TextField
-              id="phone"
-              label="PhoneNumber"
+              id="info"
+              label="Description"
               variant="outlined"
-              placeholder="Enter Your Mobile Number"
+              placeholder="Describe your project"
               fullWidth
-              required
               margin="normal"
               {...field}
             />
@@ -121,4 +119,4 @@ const Personal = () => {
   );
 };
 
-export default Personal;
+export default Projects;

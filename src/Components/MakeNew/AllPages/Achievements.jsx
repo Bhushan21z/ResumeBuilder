@@ -21,7 +21,7 @@ const Achievements = () => {
           render={({ field }) => (
             <TextField
               id="achievement1"
-              label="Achievement1"
+              label="Name of the Achievement"
               variant="outlined"
               placeholder="Enter Your Achievement"
               fullWidth
@@ -32,13 +32,43 @@ const Achievements = () => {
         />
         <Controller
           control={control}
-          name="Achievemetdesc1"
+          name="certificate1"
           render={({ field }) => (
             <TextField
-              id="achievementdesc1"
-              label="Achievemetdesc1"
+              id="certificate1"
+              label="Certificate"
               variant="outlined"
-              placeholder="Achievement Description"
+              placeholder="Certificate Link"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="Achievement2"
+          render={({ field }) => (
+            <TextField
+              id="achievement2"
+              label="Name of the Achievement"
+              variant="outlined"
+              placeholder="Enter Your Achievement"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="certificate2"
+          render={({ field }) => (
+            <TextField
+              id="certificate2"
+              label="Certificate"
+              variant="outlined"
+              placeholder="Certificate Link"
               fullWidth
               margin="normal"
               {...field}

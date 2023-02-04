@@ -2,6 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Controller, useFormContext } from "react-hook-form";
+import { Typography } from "@mui/material";
 
 const WorkExp = () => {
   const { control } = useFormContext();
@@ -15,13 +16,16 @@ const WorkExp = () => {
       autoComplete="off"
     >
       <div>
+        <Typography variant="h5" gutterBottom component="div">
+          Company 1
+        </Typography>
         <Controller
           control={control}
-          name="Company1"
+          name="company1"
           render={({ field }) => (
             <TextField
               id="company1"
-              label="Company1"
+              label="Company"
               variant="outlined"
               placeholder="Enter Company Name"
               fullWidth
@@ -32,11 +36,26 @@ const WorkExp = () => {
         />
         <Controller
           control={control}
-          name="JobDesc1"
+          name="role"
           render={({ field }) => (
             <TextField
-              id="jobdesc1"
-              label="JobDesc1"
+              id="role"
+              label="Role"
+              variant="outlined"
+              placeholder="Specify your role"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="info"
+          render={({ field }) => (
+            <TextField
+              id="info"
+              label="Job Description"
               variant="outlined"
               placeholder="Specify Job Description"
               fullWidth
@@ -47,11 +66,44 @@ const WorkExp = () => {
         />
         <Controller
           control={control}
-          name="Company2"
+          name="Start Date"
           render={({ field }) => (
             <TextField
-              id="company2"
-              label="Company2"
+              id="Startdate"
+              label="Start Date"
+              variant="outlined"
+              placeholder="Enter Your Start Date"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="End Year"
+          render={({ field }) => (
+            <TextField
+              id="Enddate"
+              label="End date"
+              variant="outlined"
+              placeholder="Enter Your End Date"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Typography variant="h5" gutterBottom component="div">
+          Company 2
+        </Typography>
+        <Controller
+          control={control}
+          name="company1"
+          render={({ field }) => (
+            <TextField
+              id="company1"
+              label="Company"
               variant="outlined"
               placeholder="Enter Company Name"
               fullWidth
@@ -62,13 +114,58 @@ const WorkExp = () => {
         />
         <Controller
           control={control}
-          name="JobDesc2"
+          name="role"
           render={({ field }) => (
             <TextField
-              id="jobdesc2"
-              label="JobDesc2"
+              id="role"
+              label="Role"
+              variant="outlined"
+              placeholder="Specify your role"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="info"
+          render={({ field }) => (
+            <TextField
+              id="info"
+              label="Job Description"
               variant="outlined"
               placeholder="Specify Job Description"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="Start Date"
+          render={({ field }) => (
+            <TextField
+              id="Startdate"
+              label="Start Date"
+              variant="outlined"
+              placeholder="Enter Your Start Date"
+              fullWidth
+              margin="normal"
+              {...field}
+            />
+          )}
+        />
+        <Controller
+          control={control}
+          name="End Year"
+          render={({ field }) => (
+            <TextField
+              id="Enddate"
+              label="End date"
+              variant="outlined"
+              placeholder="Enter Your End Date"
               fullWidth
               margin="normal"
               {...field}
