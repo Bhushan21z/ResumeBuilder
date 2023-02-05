@@ -9,6 +9,7 @@ import Template3 from "../../Assets/Template3.jpg";
 import Template4 from "../../Assets/Template4.jpg";
 import { Link } from "react-router-dom";
 import TaskIcon from "@mui/icons-material/Task";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const data = [
   {
@@ -44,6 +45,10 @@ const data = [
 ];
 
 const Template = () => {
+  const location = useLocation();
+
+  var resdata= location.state.data;
+  console.log(resdata);
   return (
     <div>
       <Typography
@@ -75,7 +80,7 @@ const Template = () => {
       >
         {/* <Grid item> */}
         {data.map((item) => (
-          <Link to="/display" style={{ textDecoration: "None" }}>
+          <Link to="/display" state={{tempno: item.no , resdata: resdata }} style={{ textDecoration: "None" }}>
             <Card
               sx={{
                 width: "auto",

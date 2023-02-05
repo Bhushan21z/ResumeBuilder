@@ -9,7 +9,9 @@ function App() {
   let location = useLocation();
   console.log(location.state);
   var tempno = location.state.tempno;
+  var resdataa= location.state.resdata;
   console.log(tempno);
+  console.log(resdataa);
   var filename = "/Resume" + tempno + ".pdf";
   console.log(filename);
   const [numPages, setNumPages] = useState(null);

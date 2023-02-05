@@ -1,5 +1,5 @@
 import React from "react";
-import "./tempstyle.css";
+import "../tempstyle.css";
 import Grid from "@mui/material/Grid";
 import { Divider, Icon, Typography } from "@mui/material";
 
@@ -45,7 +45,7 @@ var dummydata2 = {
   _id: "63d80cd760de3c53756de372",
   email: "bhushanwanjari@gmail.com",
   personal: {
-    name: "Bhushan Wanjari",
+    name: "Template5",
     position: "Software Engineer",
     contact: "7709317844",
     linkedin: "bhushan-wanjari-952042213/",
@@ -135,6 +135,7 @@ var dummydata2 = {
 
 function Template(props) {
   var dummydata=props.resdata;
+  console.log("Template5");
   return (
     <div>
       <Grid

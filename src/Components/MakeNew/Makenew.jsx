@@ -46,6 +46,105 @@ function getStepContent(step) {
 }
 
 const Makenew = () => {
+
+  //////////
+
+
+  var dummydata = {
+    _id: "63d80cd760de3c53756de372",
+    email: "bhushanwanjari@gmail.com",
+    personal: {
+      name: "Bhushan Wanjari",
+      position: "Software Engineer",
+      contact: "7709317844",
+      linkedin: "bhushan-wanjari-952042213/",
+      github: "bhushan-wanjari-952042213/",
+      email: "wanjaribl@rknec.edu",
+      bio: "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies.",
+      _id: "63d80cd760de3c53756de373",
+    },
+    skills: ["C++", "Python", "Java", "Javascript", "React", "Django"],
+    education: [
+      {
+        name: "Shri Ramdeobaba College of Engineering and Management",
+        degree: "BE CSE",
+        city: "Nagpur",
+        start: "2020",
+        end: "2024",
+        _id: "63d80cd760de3c53756de374",
+      },
+    ],
+    projects: [
+      {
+        name: "College Wit",
+        info: [
+          "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+        ],
+        link: "https://collegewit.netlify.app/",
+        _id: "63d80cd760de3c53756de375",
+      },
+      {
+        name: "Resume Builder",
+        info: [
+          "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+        ],
+        link: "https://collegewit.netlify.app/",
+        _id: "63d80cd760de3c53756de376",
+      },
+      {
+        name: "Gadget Reviewer",
+        info: [
+          "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+        ],
+        link: "https://collegewit.netlify.app/",
+        _id: "63d80cd760de3c53756de377",
+      },
+    ],
+    achievements: [
+      {
+        name: "SIH'22 Finalist",
+        cerlink: "https://collegewit.netlify.app/",
+        _id: "63d80cd760de3c53756de378",
+      },
+      {
+        name: "ach2",
+        cerlink: "https://collegewit.netlify.app/",
+        _id: "63d80cd760de3c53756de379",
+      },
+    ],
+    experience: [
+      {
+        name: "Qodeit",
+        role: "Backend Developer",
+        info: [
+          "Data Scientist with three years of experience in analyzing large data sets ",
+        ],
+        start: "11-Oct-2022",
+        end: "11-Dec-2022",
+        _id: "63d80cd760de3c53756de37a",
+      },
+      {
+        name: "Briefly",
+        role: "Frontend Developer",
+        info: [
+          "Data Scientist with three years of experience in analyzing large data sets and coming up with data-driven insights for early-stage technology companies. Worked in teams of 8-12 team members.",
+        ],
+        start: "11-Oct-2022",
+        end: "11-Dec-2022",
+        _id: "63d80cd760de3c53756de37b",
+      },
+    ],
+    createdAt: "2023-01-30T18:30:47.998Z",
+    updatedAt: "2023-01-30T18:30:47.998Z",
+    __v: 0,
+  };
+
+
+
+
+
+
+  //////////
   const navigate = useNavigate();
 
   const methods = useForm({
@@ -73,7 +172,9 @@ const Makenew = () => {
   const handleNext = (data) => {
     console.log(data);
     if (activeStep === steps.length - 1) {
-      navigate("/templates");
+      navigate("/templates",{state: {
+        data: dummydata
+      }});
     } else {
       setActiveStep(activeStep + 1);
     }
